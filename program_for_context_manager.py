@@ -6,8 +6,7 @@ from pprint import pprint
 context_m = MyContextManager()
 
 def count_words():
-    with context_m, \
-        open('Shakespeare.txt') as hamlet:
+    with context_m, open('Shakespeare.txt') as hamlet:
         pprint(Counter(chain.from_iterable(map(str.split, hamlet))))
 
 
